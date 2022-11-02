@@ -1,1 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<div style="text-align:center">
+  <h2>Tabbed Image Gallery</h2>
+  <p>Click on the images below:</p>
+</div>
+
+<!-- The four columns -->
+<div class="row">
+  <div class="column">
+    <img src="images/dumplings.jpg" alt="Dumplings"  onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="images/fried-noodles.jpg" alt="Fried Noodles"  onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="images/hotpot.jpg" alt="Hotpot"  onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="images/mooncakes.jpg" alt="Mooncakes"  onclick="myFunction(this);">
+  </div>
+</div>
+<div class="row">
+    <div class="column">
+      <img src="images/orange-chicken.jpg" alt="Orange Chicken"  onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img src="images/peking-duck.jpeg" alt="Peking Duck" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img src="images/porkbelly.jpg" alt="Porkbelly" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img src="images/red-candy.jpg" alt="Red Candy" onclick="myFunction(this);">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img src="images/spicy-bok-choy.jpg" alt="Bok Choy"  onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img src="images/steamed-buns.jpg" alt="Steamed Buns" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img src="images/zong-zi.jpg" alt="Zong Zi" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img src="images/red-candy.jpg" alt="Red Candy" onclick="myFunction(this);">
+    </div>
+  </div>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg">
+  <div id="imgtext"></div>
+</div>
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+
+</body>
+</html>

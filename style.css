@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 5%;
+    font-family: Arial;
+    box-sizing: border-box;
+  }
+  
+  /* The grid: Four equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 25%;
+    aspect-ratio : 1 / 1;
+    padding: 10px;
+  }
+  
+  .column img {
+    width: 100%;
+    aspect-ratio : 1 / 1;
+    object-fit: cover;
+    opacity: 0.8; 
+    cursor: pointer; 
+  }
+  
+  .column img:hover {
+    opacity: 1;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+
+  .container {
+    position: absolute;
+    top: 0;
+    height: 90vh;
+    width: 90vw;
+    display: none;
+    background-color: black;
+    overflow: hidden;
+  }
+  
+
+  #imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+  }
+
+ .container img {
+    height: 80vh;
+    width: fit-content;
+    position: relative;
+
+    object-fit: contain;
+  }
+  
+ 
+  .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+  }
