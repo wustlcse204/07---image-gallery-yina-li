@@ -1,73 +1,92 @@
 * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    margin: 5%;
-    font-family: Arial;
-    box-sizing: border-box;
-  }
-  
-  /* The grid: Four equal columns that floats next to each other */
-  .column {
-    float: left;
-    width: 25%;
-    aspect-ratio : 1 / 1;
-    padding: 10px;
-  }
-  
-  .column img {
-    width: 100%;
-    aspect-ratio : 1 / 1;
-    object-fit: cover;
-    opacity: 0.8; 
-    cursor: pointer; 
-  }
-  
-  .column img:hover {
-    opacity: 1;
-  }
-  
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
 
-  .container {
-    position: absolute;
-    top: 0;
-    height: 90vh;
-    width: 90vw;
-    display: none;
-    background-color: black;
-    overflow: hidden;
-    box-sizing: border-box;
-  }
-  
+html {
+  margin: 100px 10%;
+  width: auto;
+  background: rgb(255, 179, 166);
+  font-family: 'Xanh Mono', monospace;
+  color: red;
+  text-align: center;
+}
 
-  #imgtext {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    color: white;
-    font-size: 20px;
-  }
+h1 {
+  font-size: 36px;
+  padding-bottom: 20px;
+}
 
- .container img {
-    height: 80vh;
-    width: fit-content;
-    position: relative;
-    object-fit: contain;
-  }
-  
- 
-  .closebtn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    color: white;
-    font-size: 35px;
-    cursor: pointer;
-  }
+h2 {
+  padding-bottom: 100px;
+}
+
+.images {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+}
+
+.images img {
+  opacity: 70%;
+  aspect-ratio: 1;
+  width: 25%;
+  object-fit: cover;
+  margin: 0 20px 20px 0;
+  background-color: red;
+  mix-blend-mode: overlay;
+  transition: all 0.2s;
+}
+
+
+.images img:hover {
+  mix-blend-mode: normal;
+  opacity: 100%;
+}
+
+.bigpic img {
+  opacity: 100%;
+  display: none;
+  max-width: 90%;
+  max-height: 90%;
+  z-index: 10;
+  margin: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+button {
+  color: red;
+  font-size: 50pt;
+  background-color: transparent;
+}
+
+#ex {
+  font-size: 24pt;
+}
+
+#previous {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 5%;
+  z-index: 10;
+}
+
+#next {
+  display: none;
+  position: fixed;
+  top: 50%;
+  right: 5%;
+  z-index: 10;
+}
+
+#x {
+  display: none;
+  position: fixed;
+  top: 5%;
+  right: 5%;
+}

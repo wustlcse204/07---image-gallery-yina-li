@@ -1,76 +1,55 @@
+
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/df06e80d8f.js" crossorigin="anonymous"></script>
+    <title> Yina Li - Image Gallery </title>
+    <script src="script.js"> </script>
 </head>
+
 <body>
 
-<div style="text-align:center">
-  <h2>Tabbed Image Gallery</h2>
-  <p>Click on the images below:</p>
-</div>
+    <h1>Chinese Food Image Gallery </h1>
+    <h2>Yina Li</h2>
 
-<!-- The four columns -->
-<div class="row">
-  <div class="column">
-    <img src="images/dumplings.jpg" alt="Dumplings"  onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="images/fried-noodles.jpg" alt="Fried Noodles"  onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="images/hotpot.jpg" alt="Hotpot"  onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="images/mooncakes.jpg" alt="Mooncakes"  onclick="myFunction(this);">
-  </div>
-</div>
-<div class="row">
-    <div class="column">
-      <img src="images/orange-chicken.jpg" alt="Orange Chicken"  onclick="myFunction(this);">
+    <div class="bigpic">
+        <img src="images/0.jpg" alt="first" id="bigpic">
     </div>
-    <div class="column">
-      <img src="images/peking-duck.jpeg" alt="Peking Duck" onclick="myFunction(this);">
-    </div>
-    <div class="column">
-      <img src="images/porkbelly.jpg" alt="Porkbelly" onclick="myFunction(this);">
-    </div>
-    <div class="column">
-      <img src="images/red-candy.jpg" alt="Red Candy" onclick="myFunction(this);">
-    </div>
-  </div>
 
-  <div class="row">
-    <div class="column">
-      <img src="images/spicy-bok-choy.jpg" alt="Bok Choy"  onclick="myFunction(this);">
+    <div id="previous">
+        <button onclick="previous()"><i class="fa-solid fa-arrow-left"></i></button>
     </div>
-    <div class="column">
-      <img src="images/steamed-buns.jpg" alt="Steamed Buns" onclick="myFunction(this);">
-    </div>
-    <div class="column">
-      <img src="images/zong-zi.jpg" alt="Zong Zi" onclick="myFunction(this);">
-    </div>
-    <div class="column">
-      <img src="images/red-candy.jpg" alt="Red Candy" onclick="myFunction(this);">
-    </div>
-  </div>
 
-<div class="container">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  <img id="expandedImg">
-  <div id="imgtext"></div>
-</div>
+    <div id="next">
+        <button onclick="next()"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
 
-<script>
-function myFunction(imgs) {
-  var expandImg = document.getElementById("expandedImg");
-  var imgText = document.getElementById("imgtext");
-  expandImg.src = imgs.src;
-  imgText.innerHTML = imgs.alt;
-  expandImg.parentElement.style.display = "block";
-}
-</script>
+    <div id="x">
+        <button id="ex" onclick="x()"><i class="fa-solid fa-x"></i></button>
+    </div>
+
+    <div class="images">
+            <img src="images/0.jpg" alt="Dumplings" onclick="view(this)">
+            <img src="images/1.jpg" alt="Fried Noodles" onclick="view(this)">
+            <img src="images/2.jpg" alt="Hotpot" onclick="view(this)">
+            <img src="images/3.jpg" alt="Mooncakes" onclick="view(this)">
+            <img src="images/4.jpg" alt="Orange Chicken" onclick="view(this)">
+            <img src="images/5.jpg" alt="Peking Duck" onclick="view(this)">
+            <img src="images/6.jpg" alt="Porkbelly" onclick="view(this)">
+            <img src="images/7.jpg" alt="Red Candy" onclick="view(this)">
+            <img src="images/8.jpg" alt="Spring Rolls" onclick="view(this)">
+            <img src="images/9.jpg" alt="Spicy Bok Choy" onclick="view(this)">
+            <img src="images/10.jpg" alt="Steamed Buns" onclick="view(this)">
+            <img src="images/11.jpg" alt="Zong Zi" onclick="view(this)">
+        </div>
+
+    </div>
 
 </body>
+
 </html>
